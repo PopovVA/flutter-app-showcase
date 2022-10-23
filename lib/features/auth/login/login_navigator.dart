@@ -11,10 +11,9 @@ class LoginNavigator with NoRoutes {
   final AppNavigator appNavigator;
 }
 
-//ignore: unused-code
 mixin LoginRoute {
-  Future<void> openLogin(LoginInitialParams initialParams) async {
-    return appNavigator.push(
+  void openLogin(LoginInitialParams initialParams) {
+    appNavigator.push(
       materialRoute(getIt<LoginPage>(param1: initialParams)),
     );
   }
